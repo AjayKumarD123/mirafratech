@@ -1,19 +1,22 @@
 #include<stdio.h>
-void atoi(char s[])
+int strrlen(char s[])
 {
-int i,n=0;
-for(i=0;s[i]!=0;i++)
+int i=0;
+while(s[i]!=0)
 {
-n=(n*10)+(s[i]-48);
+i++;
 }
-printf("%d",n);
+return i;
 }
+
 
 
 int main()
 {
+int k;
 char s[100];
 printf("enter the string\n");
 scanf("%s",s);
-atoi(s);
+k=strrlen(s);
+printf("%d",k);
 }
